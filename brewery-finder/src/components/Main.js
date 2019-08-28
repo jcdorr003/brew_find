@@ -9,7 +9,7 @@ class Main extends React.Component {
   constructor() {
     super()
     this.state = {
-      allData: []
+      breweries: []
     }
   }
 
@@ -17,7 +17,7 @@ class Main extends React.Component {
     axios.get('https://api.openbrewerydb.org/breweries?by_state=new_york')
     .then(response => {
     this.setState({
-      allData: response.data
+      breweries: response.data
     });
     console.log('this is allData', response.data);
     })
@@ -33,17 +33,14 @@ class Main extends React.Component {
 
 
   render() {
-    console.log(this.state.allData)
+    console.log(this.state.breweries)
 
     return (
-      <main>
-
+      <main className='main'>
         <Switch>
-          <Route path='/search' render={(props) => <BrewerySearch {...props} allData={this.state.allData} />} />
+          <Route path='/search' render={(props) => <BrewerySearch {...props}      breweries={this.state.breweries} />} />
           <Route exact path='/home' component={Home} />
         </Switch>
-      
-
       </main>
     )
   }

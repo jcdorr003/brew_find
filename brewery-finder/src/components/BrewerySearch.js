@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 class BrewerySearch extends React.Component {
   state = {
@@ -7,27 +7,34 @@ class BrewerySearch extends React.Component {
   }
   handleClick = (d) => {
     this.setState({
-      street:d.street,
+      currentBrewery:d,
       clicked:true
     })
   }
 
   render() {
-    console.log(this.props.allData)
-    let mappedData = this.props.allData.map((d, i) => {
-      return <p key={i} onClick={(d)=>this.handleClick(d)}>{d.name}</p>
+    console.log(this.props.breweries)
+    let mappedData = this.props.breweries.map((d, i) => {
+      return <p key={i} onClick={()=>this.handleClick(d)}>{d.name}</p>
     })
 
-    let details = this.state.clicked ? this.state.street : null
+    let details = this.state.clicked ? (
+      <>
+        <p>{this.state.currentBrewery.name}</p>
+        <p>{this.state.currentBrewery.city}</p>
+        <p>{this.state.currentBrewery.street}</p>
+        <a href={this.state.currentBrewery.website_url}>Website</a>
+      </>
+    ) : null
     return (
-      <React.Fragment>
-        <div>
+      <div id='breweryContainer'>
+        <div id='breweryList'>
           {mappedData}
         </div>
-        <div>
+        <div id='breweryDetails'>
           {details}
         </div>
-      </React.Fragment>
+      </div>
     )
   }
 }

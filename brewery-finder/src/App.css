@@ -20,7 +20,9 @@
 .navbar {
   display: flex;
   justify-content: space-between;
-  border: 1px solid black;
+  background-color: #216583;
+  color: white;
+  height: 90px;
 }
 
 .nav-links {
@@ -28,25 +30,69 @@
   flex-direction: column;
   justify-content: space-around;
   padding-right: 20px;
+  text-decoration: none;
+  color: white;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
 }
 
 #beer-icon {
   height: 80px;
   width: 80px;
+  margin:5px;
 }
 
 .main {
   height: 100vh;
+  background-color: #00818a;
+  color: white;
 }
 
 .welcome-container {
-  display: flex;
-  border:1px solid black;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "welcome1 gif1"
+    "gif2 welcome2";
   height: 100vh;
-  justify-content: center;
-  align-items: center;
 }
 
+#welcome1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-area: "welcome1;"
+}
+
+#drunk-cups {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-area: "gif2";
+  height:100%;
+  width: 75%;
+  padding-left: 15%;
+
+
+}
+
+#welcome2 {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  grid-area: "welcome2";
+}
+
+#drunk-sock {
+  grid-area: "gif1";
+  height:100%;
+  width: 75%;
+  padding-right: 25%;
+}
 
 #breweryContainer {
   border: border-box;
@@ -60,16 +106,29 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  border: 1px solid black;
   height: 80vh;
   overflow-y:scroll;
+  flex: 2;
+  padding-left: 100px;
+}
+
+#breweryList p:hover {
+  cursor: pointer;
 }
 
 #breweryDetails {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  flex: 1;
+  padding-right: 200px;
+  font-size: 20px;
+}
 
+#breweryDetails a {
+  text-decoration: none;
+  color: gold;
+  margin: 20px;
 }
 
 @keyframes App-logo-spin {

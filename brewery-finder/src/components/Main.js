@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios'
-import {Route, Switch} from 'react-router-dom'
+import {Route, Switch, Redirect} from 'react-router-dom'
 import Home from './Home'
 import BrewerySearch from './BrewerySearch'
 
@@ -40,6 +40,7 @@ class Main extends React.Component {
         <Switch>
           <Route path='/search' render={(props) => <BrewerySearch {...props}      breweries={this.state.breweries} />} />
           <Route exact path='/home' component={Home} />
+          <Redirect from="/" to="home" />
         </Switch>
       </main>
     )

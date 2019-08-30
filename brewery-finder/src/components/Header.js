@@ -4,11 +4,9 @@ import {Link} from 'react-router-dom';
 const Header = () => {
   return (
     <nav className='navbar'>
-      <div>
+      <div className='logo'>
         <img id='beer-icon' src={require("../Beer icon.svg")} alt='' />
-      </div>
-      <div>
-        <h1 id='title'>Brew Find</h1>
+        <h1 id='title'>BREW FIND</h1>
       </div>
       <div className='nav-links'>
         <Link to='/home'>Home</Link>

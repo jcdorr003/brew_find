@@ -21,84 +21,108 @@
   display: flex;
   justify-content: space-between;
   background-color: #216583;
+  height: 60px;
   color: white;
-  height: 90px;
+  font-family: 'Yantramanav', sans-serif;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .nav-links {
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  padding-right: 20px;
-  text-decoration: none;
-  color: white;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
 }
 
 .nav-links a {
   text-decoration: none;
+  font-size: 20px;
   color: white;
+  margin: 10px;
 }
 
 #beer-icon {
-  height: 80px;
-  width: 80px;
+  height: 50px;
+  width: 50px;
   margin:5px;
 }
 
 .main {
-  height: 100vh;
+  height: calc(100% - 100px);
   background-color: #00818a;
   color: white;
+  overflow-y: hidden;
+  /* min-height: 100vh; */
+}
+
+.welcome-wrapper {
+  background-image: url('./beer_background.jpeg');
+  background-position: center;
 }
 
 .welcome-container {
-  display: grid;
-  grid-template-rows: 1fr 1fr;
-  grid-template-columns: 1fr 1fr;
-  grid-template-areas:
-    "welcome1 gif1"
-    "gif2 welcome2";
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.welcome-messages {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  padding-bottom: 100px;
+
 }
 
 #welcome1 {
-  display: flex;
+  /* display: flex;
   justify-content: center;
-  align-items: center;
-  grid-area: "welcome1;"
+  align-items: center; */
+  font-family: 'Shrikhand', cursive;
+  font-size: 90px;
+  margin: 0px;
 }
 
-#drunk-cups {
+/* #drunk-cups {
   display: flex;
-  justify-content: center;
-  align-items: center;
   grid-area: "gif2";
   height:100%;
-  width: 75%;
-  padding-left: 15%;
-
-
-}
+  width: auto;
+  padding-left: 20%;
+} */
 
 #welcome2 {
-  display:flex;
+  /* display:flex;
   justify-content: center;
-  align-items: center;
-  grid-area: "welcome2";
+  align-items: center; */
+  font-family: 'Yantramanav', sans-serif;
+  font-size: 30px;
+  margin: 0px;
 }
 
-#drunk-sock {
+/* #drunk-sock {
   grid-area: "gif1";
   height:100%;
-  width: 75%;
-  padding-right: 25%;
-}
+  width: auto;
+  padding-left: 28%;
+} */
 
 #breweryContainer {
   border: border-box;
   display: flex;
   justify-content: space-around;
   padding-top: 30px;
+  overflow-y: hidden;
+  font-family: 'Yantramanav', sans-serif;
 
 }
 
@@ -107,9 +131,10 @@
   flex-direction: column;
   justify-content: center;
   height: 80vh;
-  overflow-y:scroll;
+  overflow-y: scroll;
   flex: 2;
-  padding-left: 100px;
+  padding-left: 70px;
+
 }
 
 #breweryList p:hover {
@@ -129,6 +154,15 @@
   text-decoration: none;
   color: gold;
   margin: 20px;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #216583;
+  color: white;
+  height: 40px;
 }
 
 @keyframes App-logo-spin {

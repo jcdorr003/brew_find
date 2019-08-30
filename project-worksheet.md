@@ -16,16 +16,16 @@ https://res.cloudinary.com/jcdorr003/image/upload/v1566591806/Screen_Shot_2019-0
 
 ### MVP/PostMVP - 5min
 
-The functionality will then be divided into two separate lists: MPV and PostMVP.  Carefully decided what is placed into your MVP as the client will expect this functionality to be implemented upon project completion.  
 
-#### MVP EXAMPLE
+
+#### MVP
 - use Open Brewery DB API
 - Render data on page when user clicks on link or inters text into input
-- Allow the user to easily interact with the website as well as add to a favorites list
+- Allow the user to easily interact with site as well as look visually appealing
 
 #### PostMVP EXAMPLE
-
--
+- Style the home page to make it as visually appealing as possibilities
+- Make the API call pull data for all states and style the website accordingly 
 
 ## React Component Hierarchy
 

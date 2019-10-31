@@ -23,7 +23,7 @@ class BrewerySearch extends React.Component {
         <p>{this.state.currentBrewery.name}</p>
         <p>{this.state.currentBrewery.city}</p>
         <p>{this.state.currentBrewery.street}</p>
-        <a href={this.state.currentBrewery.website_url}>Website</a>
+        <a target='_blank' href={this.state.currentBrewery.website_url}>Website</a>
       </>
     ) : null
     return (
